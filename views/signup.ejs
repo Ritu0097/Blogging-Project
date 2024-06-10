@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Signup</title>
+        <%- include('./partials/style') %>
+    </head>
+    <body>
+        <div class="wrapper">
+        <h2>Signup Page</h2>
+        <br>
+        <form class="user-form" method="POST" action="http://localhost:3000/register">
+            <input type="text" name="name" placeholder="Enter Your Name"/>
+            <br><br>
+            <input type="email" name="email" placeholder="Enter Your Email"/>
+            <br><br>
+            <input type="password" name="password" placeholder="Enter Your Password"/>
+            <br><br>
+            <input type="submit" value="Submit"/>
+            <% if(message){%>
+                <p><%= message %></p>
+                <% } %>
+        </form>
+        <hr>
+        <a href="/login">Login</a>
+    </div>
+    </body>
+</html>
